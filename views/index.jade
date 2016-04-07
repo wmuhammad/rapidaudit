@@ -1,0 +1,62 @@
+
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    // Wrapper
+    #wrapper
+
+        // INFO
+        #userInfo
+            h2 Infos
+            p
+                strong Nom:
+                |  <span id='userNom'></span>
+                br
+                strong Adresse:
+                |  <span id='userAdresse'></span>
+                br
+                strong Telephone:
+                |  <span id='userTelephone'></span>
+                br
+                strong Diagnostic:
+                |  <span id='userDiagnostic'></span>
+                br
+                strong Date:
+                |  <span id='userDate'></span>
+                br
+        // /USER INFO
+
+        // Liste des visites
+        h2 Liste
+        #userList
+            table
+                thead
+                    th ID
+                    th Visites
+                    th Diagnostic
+                    th Modifier
+                    th Supprimer
+                tbody
+        // /USER LIST
+
+        // Ajouter un utilisateur
+        h2 Ajouter un utilisateur
+        #addUser
+            fieldset
+                input#inputNom(type='text', placeholder='Nom')
+                input#inputAdresse(type='text', placeholder='Adresse')
+                br
+                input#inputTelephone(type='text', placeholder='Telephone')
+                input#inputDiagnostic(type='text', placeholder='Diagnostic')
+                br
+                input#inputDate(type='date', placeholder='Date')
+
+                button#btnAddUser Add User
+        // /ADD USER
+
+    
+
+    // /WRAPPER
